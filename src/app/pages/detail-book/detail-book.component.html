@@ -1,0 +1,10 @@
+<div *ngIf="bookDetails">
+  <div class="d-flex justify-content-between flex-row bd-highlight mb-3">
+    <h2>Book's Details</h2>
+    <button class="action-link btn btn-success" [routerLink]="['']">Quay lại danh sách</button>
+  </div>
+  <p><b>Book's title:</b> {{ bookDetails.title }}</p>
+  <p><b>Author: </b>{{ bookDetails.author }}</p>
+  <p><b>Description:</b></p>
+  <p>{{ bookDetails.description }}</p>
+</div>

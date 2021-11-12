@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Book's title</label>
+    <textarea formControlName="title" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div *ngIf="control('title').invalid" class="text-danger">* Invalid book title!</div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Author</label>
+    <input formControlName="author" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Author's name">
+    <div *ngIf="control('author').invalid" class="text-danger">* Invalid author name !</div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Description</label>
+    <input formControlName="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Book's Description">
+    <div *ngIf="control('description').invalid" class="text-danger">* Invalid book description</div>
+  </div>
+
+
+  <div class="form-group">
+    <button class="btn btn-primary btn-block m-3">Submit Edit</button>
+    <button [routerLink]="['']" class="btn btn-danger btn-block m3">Cancel</button>
+  </div>
+</form>
